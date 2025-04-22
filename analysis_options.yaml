@@ -1,0 +1,78 @@
+# This file configures the analyzer, which statically analyzes Dart code to
+# check for errors, warnings, and lints.
+#
+# The issues identified by the analyzer are surfaced in the UI of Dart-enabled
+# IDEs (https://dart.dev/tools#ides-and-editors). The analyzer can also be
+# invoked from the command line by running `flutter analyze`.
+
+# The following line activates a set of recommended lints for Flutter apps,
+# packages, and plugins designed to encourage good coding practices.
+include: package:flutter_lints/flutter.yaml
+
+linter:
+  # The lint rules applied to this project can be customized in the
+  # section below to disable rules from the `package:flutter_lints/flutter.yaml`
+  # included above or to enable additional rules. A list of all available lints
+  # and their documentation is published at https://dart.dev/lints.
+  #
+  # Instead of disabling a lint rule for the entire project in the
+  # section below, it can also be suppressed for a single line of code
+  # or a specific dart file by using the `// ignore: name_of_lint` and
+  # `// ignore_for_file: name_of_lint` syntax on the line or in the file
+  # producing the lint.
+  rules:
+    # avoid_print: false  # Uncomment to disable the `avoid_print` rule
+    # prefer_single_quotes: true  # Uncomment to enable the `prefer_single_quotes` rule
+
+# Additional information about this file can be found at
+# https://dart.dev/guides/language/analysis-options
+
+
+#linter:
+#  rules:
+#    # Common Best Practices
+#    - avoid_print # Avoid using print statements
+#    - prefer_const_constructors # Prefer const constructors when possible
+#    - prefer_const_declarations # Prefer const for variables that don’t change
+#    - prefer_final_fields # Use final for fields that are not reassigned
+#    - avoid_unused_constructor_parameters # Avoid unnecessary constructor parameters
+#    - always_declare_return_types # Always specify return types for functions/methods
+#    - prefer_single_quotes # Use single quotes for strings
+#    - unnecessary_this # Avoid using 'this' when not needed
+#    - avoid_redundant_argument_values # Avoid passing default values explicitly
+#
+#    # Naming Conventions
+#    - camel_case_types # Classes should use UpperCamelCase
+#    - camel_case_extensions # Extensions should use UpperCamelCase
+#    - library_prefixes # Enforce good library prefix naming
+#
+#    # Code Readability
+#    - sort_child_properties_last # Keep child property at the bottom in widget constructors
+#    - require_trailing_commas # Require trailing commas for cleaner diffs
+#
+#    # Performance Optimization
+#    - avoid_unnecessary_containers # Avoid wrapping widgets in unnecessary Containers
+#    - use_super_parameters # Use super parameters for cleaner constructors
+#
+#    # Error Prevention
+#    - avoid_empty_else # Avoid empty else statements
+#    - always_use_package_imports # Prefer package imports over relative imports
+#    - no_leading_underscores_for_local_identifiers # Avoid leading underscores for local variables
+#    - avoid_classes_with_only_static_members # Prefer top-level functions over static classes
+#
+#    # Null Safety & Type Safety
+#    - avoid_null_checks_in_equality_operators # Avoid using null checks in equality operators
+#    - avoid_type_to_string # Avoid using `.toString()` on Type objects
+#    - prefer_void_to_null # Prefer void over Null for return types
+#
+#analyzer:
+#  errors:
+#    avoid_print: warning # Print statements should be warnings instead of errors
+#    always_declare_return_types: error # Missing return types should be errors
+#    prefer_final_fields: warning
+#
+#  exclude:
+#    - "**/*.g.dart" # Ignore generated files
+#    - "**/*.freezed.dart"
+#    - "**/*.mocks.dart"
+#    - "**/*.gr.dart"
