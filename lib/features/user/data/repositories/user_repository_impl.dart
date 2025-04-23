@@ -1,6 +1,6 @@
 import 'package:cubit_ca_demo/features/user/domain/entities/user.dart';
 import 'package:cubit_ca_demo/features/user/domain/repositories/user_repository.dart';
-import '../../../../core/network/api_service.dart';
+import 'package:cubit_ca_demo/core/network/api_service.dart';
 
 class UserRepositoryImpl implements UserRepository {
   final ApiService apiService;
