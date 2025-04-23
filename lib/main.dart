@@ -1,10 +1,10 @@
 import 'package:cubit_ca_demo/features/user/presentation/cubit/user_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'core/network/api_service.dart';
-import 'features/user/data/repositories/user_repository_impl.dart';
-import 'features/user/domain/usecases/get_user.dart';
-import 'features/user/presentation/pages/user_page.dart';
+import 'package:cubit_ca_demo/core/network/api_service.dart';
+import 'package:cubit_ca_demo/features/user/data/repositories/user_repository_impl.dart';
+import 'package:cubit_ca_demo/features/user/domain/usecases/get_user.dart';
+import 'package:cubit_ca_demo/features/user/presentation/pages/user_page.dart';
 
 void main() {
   // Initialiser les services
