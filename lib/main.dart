@@ -49,12 +49,12 @@ class MyApp extends StatelessWidget {
         providers: [
           BlocProvider(create: (context) => UserCubit(getUser)),
           BlocProvider(create: (context) => ColorCubit(changeColor)),
-    ],
-    child: MaterialApp(
-    title: 'Cubit Clean Architecture Demo',
-    home: const UserPage(),
+        ],
+        child: const MaterialApp(
+          title: 'Cubit Clean Architecture Demo',
+          home: UserPage(),
+        ),
       ),
-    )
     );
   }
 }

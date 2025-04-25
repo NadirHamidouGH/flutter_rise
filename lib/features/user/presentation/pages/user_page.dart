@@ -1,9 +1,9 @@
 import 'package:cubit_ca_demo/features/changement_couleur/presentation/cubit/color_cubit.dart';
-import 'package:cubit_ca_demo/features/changement_couleur/presentation/cubit/color_state.dart'; // Ajouté
+import 'package:cubit_ca_demo/features/changement_couleur/presentation/cubit/color_state.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import '../cubit/user_state.dart';
-import '../cubit/user_cubit.dart';
+import 'package:cubit_ca_demo/features/user/presentation/cubit/user_state.dart';
+import 'package:cubit_ca_demo/features/user/presentation/cubit/user_cubit.dart';
 
 class UserPage extends StatelessWidget {
   const UserPage({super.key});
@@ -22,7 +22,7 @@ class UserPage extends StatelessWidget {
         }
 
         return Scaffold(
-          appBar: AppBar(title: Text('Cubit + Clean Architecture')),
+          appBar: AppBar(title: const Text('Cubit + Clean Architecture')),
           backgroundColor: backgroundColor, // Ajout de la couleur dynamique ici
           body: Center(
             child: BlocBuilder<UserCubit, UserState>(
@@ -41,12 +41,16 @@ class UserPage extends StatelessWidget {
                     children: [
                       ElevatedButton(
                         onPressed: () => context.read<UserCubit>().fetchUser(),
-                        child: Text('Fetch User'),
+                        child: const Text('Fetch User'),
                       ),
-                      SizedBox(height: 8),
+                      const SizedBox(height: 8),
                       ElevatedButton(
-                        onPressed: () => context.read<ColorCubit>().changeBackgroundColor(),
-                        child: Text('Changement Couleur Background'),
+                        onPressed:
+                            () =>
+                                context
+                                    .read<ColorCubit>()
+                                    .changeBackgroundColor(),
+                        child: const Text('Changement Couleur Background'),
                       ),
                     ],
                   );
@@ -54,7 +58,7 @@ class UserPage extends StatelessWidget {
                   // Si l'état est UserLoading, cela veut dire qu'on est en train de récupérer l'utilisateur.
                   // Donc on affiche un indicateur de chargement (loader).
 
-                  return CircularProgressIndicator();
+                  return const CircularProgressIndicator();
                 } else if (state is UserLoaded) {
                   // Si l'état est UserLoaded, cela signifie que les données de l'utilisateur ont été récupérées avec succès.
                   // On affiche alors les informations de l'utilisateur (nom et âge).
@@ -64,17 +68,21 @@ class UserPage extends StatelessWidget {
                     children: [
                       Text('Name: ${state.user.name}'),
                       Text('Age: ${state.user.age}'),
-                      SizedBox(height: 16),
+                      const SizedBox(height: 16),
 
                       // On propose aussi un bouton pour réinitialiser l'état
                       // en appelant resetState() du UserCubit.
                       ElevatedButton(
                         onPressed: () => context.read<UserCubit>().resetState(),
-                        child: Text('Reset'),
+                        child: const Text('Reset'),
                       ),
                       ElevatedButton(
-                        onPressed: () => context.read<ColorCubit>().changeBackgroundColor(),
-                        child: Text('Changement Couleur Background'),
+                        onPressed:
+                            () =>
+                                context
+                                    .read<ColorCubit>()
+                                    .changeBackgroundColor(),
+                        child: const Text('Changement Couleur Background'),
                       ),
                     ],
                   );
