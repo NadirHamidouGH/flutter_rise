@@ -1,5 +1,5 @@
-import '../entities/user.dart';
-import '../repositories/user_repository.dart';
+import 'package:cubit_ca_demo/features/user/domain/entities/user.dart';
+import 'package:cubit_ca_demo/features/user/domain/repositories/user_repository.dart';
 
 class GetUser {
   final UserRepository repository;

@@ -13,7 +13,7 @@ class UserCubit extends Cubit<UserState> {
       final user = await getUser();
       emit(UserLoaded(user));
     } catch (e) {
-      emit(UserError("Failed to fetch user"));
+      emit(UserError('Failed to fetch user'));
     }
   }
 
