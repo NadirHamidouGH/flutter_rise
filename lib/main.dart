@@ -2,15 +2,14 @@ import 'package:cubit_ca_demo/features/changement_couleur/data/repositories/colo
 import 'package:cubit_ca_demo/features/changement_couleur/domain/usecases/change_color.dart';
 import 'package:cubit_ca_demo/features/changement_couleur/presentation/cubit/color_cubit.dart';
 import 'package:cubit_ca_demo/features/user/presentation/cubit/user_cubit.dart';
+import 'package:cubit_ca_demo/routes/app_router.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:cubit_ca_demo/core/network/api_service.dart';
 import 'package:cubit_ca_demo/features/user/data/repositories/user_repository_impl.dart';
 import 'package:cubit_ca_demo/features/user/domain/usecases/get_user.dart';
-import 'package:cubit_ca_demo/features/user/presentation/pages/user_page.dart';
 
 void main() {
-  // Initialiser les services
   final apiService = ApiService(baseUrl: 'https://randomuser.me');
   final userRepository = UserRepositoryImpl(apiService);
   final getUser = GetUser(userRepository);
@@ -50,11 +49,13 @@ class MyApp extends StatelessWidget {
           BlocProvider(create: (context) => UserCubit(getUser)),
           BlocProvider(create: (context) => ColorCubit(changeColor)),
         ],
-        child: const MaterialApp(
-          title: 'Cubit Clean Architecture Demo',
-          home: UserPage(),
+        child: MaterialApp.router(
+         routerConfig: router,
+
+
         ),
       ),
     );
   }
 }
+
