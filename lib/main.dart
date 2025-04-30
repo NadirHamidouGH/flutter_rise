@@ -2,7 +2,7 @@ import 'package:cubit_ca_demo/features/changement_couleur/data/repositories/colo
 import 'package:cubit_ca_demo/features/changement_couleur/domain/usecases/change_color.dart';
 import 'package:cubit_ca_demo/features/changement_couleur/presentation/cubit/color_cubit.dart';
 import 'package:cubit_ca_demo/features/user/presentation/cubit/user_cubit.dart';
-import 'package:cubit_ca_demo/routes/app_router.dart';
+import 'package:cubit_ca_demo/app_router.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:cubit_ca_demo/core/network/api_service.dart';
@@ -50,7 +50,7 @@ class MyApp extends StatelessWidget {
           BlocProvider(create: (context) => ColorCubit(changeColor)),
         ],
         child: MaterialApp.router(
-         routerConfig: router,
+         routerConfig: appRouter,
 
 
         ),
