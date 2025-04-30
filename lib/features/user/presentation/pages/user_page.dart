@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:cubit_ca_demo/features/user/presentation/cubit/user_state.dart';
 import 'package:cubit_ca_demo/features/user/presentation/cubit/user_cubit.dart';
+import 'package:go_router/go_router.dart';
 
 class UserPage extends StatelessWidget {
   const UserPage({super.key});
@@ -22,7 +23,7 @@ class UserPage extends StatelessWidget {
         }
 
         return Scaffold(
-          appBar: AppBar(title: const Text('Cubit + Clean Architecture')),
+          appBar: AppBar(title: const Text('User Page')),
           backgroundColor: backgroundColor, // Ajout de la couleur dynamique ici
           body: Center(
             child: BlocBuilder<UserCubit, UserState>(
@@ -43,15 +44,7 @@ class UserPage extends StatelessWidget {
                         onPressed: () => context.read<UserCubit>().fetchUser(),
                         child: const Text('Fetch User'),
                       ),
-                      const SizedBox(height: 8),
-                      ElevatedButton(
-                        onPressed:
-                            () =>
-                                context
-                                    .read<ColorCubit>()
-                                    .changeBackgroundColor(),
-                        child: const Text('Changement Couleur Background'),
-                      ),
+
                     ],
                   );
                 } else if (state is UserLoading) {
@@ -76,13 +69,10 @@ class UserPage extends StatelessWidget {
                         onPressed: () => context.read<UserCubit>().resetState(),
                         child: const Text('Reset'),
                       ),
+                      const SizedBox(height: 16),
                       ElevatedButton(
-                        onPressed:
-                            () =>
-                                context
-                                    .read<ColorCubit>()
-                                    .changeBackgroundColor(),
-                        child: const Text('Changement Couleur Background'),
+                        onPressed: () => context.go('/'),
+                        child: const Text('Back to Home'),
                       ),
                     ],
                   );
