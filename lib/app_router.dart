@@ -5,12 +5,13 @@ import 'package:cubit_ca_demo/features/changement_couleur/presentation/routes/co
 import 'package:cubit_ca_demo/features/user/presentation/routes/user_route.dart';
 
 
-/// AppRouter est une classe qui gère la navigation de l'application.
-/// Elle utilise le package GoRouter pour définir les routes de l'application.
-/// Elle contient une liste de routes et un routeur GoRouter.
-/// Elle permet de naviguer entre les différentes pages de l'application.
-/// Elle est utilisée dans le fichier main.dart pour configurer la navigation de l'application.
-/// Elle est utilisée dans les fichiers de chaque fonctionnalité pour définir les routes spécifiques à chaque fonctionnalité.
+/// AppRouter is a class that manages the application's navigation.
+/// It uses the GoRouter package to define the application's routes.
+/// It contains a list of routes and a GoRouter router.
+/// It allows navigation between the different pages of the application.
+/// It is used in the main.dart file to configure the application's navigation.
+/// It is used in the files of each feature to define routes specific to each feature.
+
 
 class AppRouter {
   static const String home = '/';
@@ -27,9 +28,9 @@ final GoRouter appRouter = GoRouter(
 );
 
 
-/// Cette méthode permet de revenir à la vue précédente.
-/// Elle utilise le GoRouter pour effectuer la navigation.
-///
+/// This method allows returning to the previous view.
+/// It uses GoRouter to perform the navigation.
+
 void backToPreviousView(BuildContext context) {
   GoRouter.of(context).pop();
 }
