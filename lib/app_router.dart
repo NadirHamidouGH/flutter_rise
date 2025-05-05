@@ -14,12 +14,6 @@ import 'package:cubit_ca_demo/features/changement_couleur/presentation/routes/co
 /// It is used in the files of each feature to define routes specific to each feature.
 
 
-class AppRouter {
-  static const String home = '/';
-  static const String color = '/color';
-  static const String user = '/user';
-}
-
 final GoRouter appRouter = GoRouter(
   routes: <RouteBase> [
     ...homeRoutes,

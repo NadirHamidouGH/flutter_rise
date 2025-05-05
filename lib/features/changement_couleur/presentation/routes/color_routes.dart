@@ -1,4 +1,3 @@
-import 'package:cubit_ca_demo/app_router.dart' show AppRouter;
 import 'package:cubit_ca_demo/features/changement_couleur/presentation/routes/Color_route5.dart';
 import 'package:cubit_ca_demo/features/changement_couleur/presentation/routes/color_default_route.dart';
 import 'package:go_router/go_router.dart';
