@@ -5,7 +5,7 @@ import 'package:cubit_ca_demo/features/changement_couleur/presentation/cubit/col
 import 'package:go_router/go_router.dart';
 
 class ColorPage extends StatelessWidget {
-  const ColorPage({super.key});
+  const ColorPage({super.key, });
 
   @override
   Widget build(BuildContext context) {

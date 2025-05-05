@@ -1,8 +1,9 @@
 import 'package:cubit_ca_demo/features/home/presentation/routes/home_route.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:go_router/go_router.dart';
-import 'package:cubit_ca_demo/features/changement_couleur/presentation/routes/color_route.dart';
 import 'package:cubit_ca_demo/features/user/presentation/routes/user_route.dart';
+import 'package:cubit_ca_demo/features/changement_couleur/presentation/routes/color_routes.dart';
+
 
 
 /// AppRouter is a class that manages the application's navigation.
